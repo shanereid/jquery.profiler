@@ -1,0 +1,88 @@
+.clear 		{clear: both !important;}
+.dnd		{display:none;}
+.floatright {float:right !important;}
+.floatleft	{float:left !important;}
+
+.hr {width:100%; border-top:1px solid #ccc; float:left; margin-bottom:20px;}
+.hr hr {display: none;}
+
+.css3-transition {
+   -moz-transition: all 0.3s ease-out;  
+     -o-transition: all 0.3s ease-out;  
+-webkit-transition: all 0.3s ease-out;  
+    -ms-transition: all 0.3s ease-out;  
+        transition: all 0.3s ease-out; 
+}
+
+/* Force Scrollbars in Lion (Snippet)
+
+http://simurai.com/post/8083942390/force-lion-scrollbar
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+*/
+
+input[type=submit], label, select {cursor:pointer;}
+
+form {
+}
+
+legend {
+}
+
+optgroup {
+}
+
+select {
+}
+	option {
+	}
+
+label {
+}
+
+input,
+textarea {
+/* Clears Padding (NOT IE6/IE7) */
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+input {
+}	
+
+		input:hover, textarea:hover {
+		}
+		
+		input:focus, textarea:focus {
+		}
+
+	input[type=checkbox],
+	input.checkbox {
+	}
+	
+	input[type=radio],
+	input.radio {
+	}
+	
+	input[type=text],
+	input.text {
+	}
+	
+	input[type=checkbox],
+	input.checkbox {
+	}
+
+textarea {
+resize: none;
+outline: none;
+}

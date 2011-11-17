@@ -1,0 +1,79 @@
+#debug-console .data-preview {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+#debug-console .data-preview .prop {
+  font-weight: bold;
+}
+
+#debug-console .data-preview .null {
+  color: red;
+}
+
+#debug-console .data-preview .bool {
+  color: blue;
+}
+
+#debug-console .data-preview .num {
+  color: blue;
+}
+
+#debug-console .data-preview .string {
+  color: green;
+}
+
+#debug-console .data-preview .collapser {
+  position: absolute;
+  left: -1em;
+  cursor: pointer;
+}
+
+#debug-console .data-preview li {
+  position: relative;
+}
+
+#debug-console .data-preview li:after {
+  content: ',';
+}
+
+#debug-console .data-preview li:last-child:after {
+  content: '';
+}
+
+#debug-console .data-preview #error {
+  -moz-border-radius: 8px;
+  border: 1px solid #970000;
+  background-color: #F7E8E8;
+  margin: .5em;
+  padding: .5em;
+}
+
+#debug-console .data-preview .errormessage {
+  font-family: monospace;  
+}
+
+#debug-console .data-preview #json {
+  font-family: monospace;
+  font-size: 1.1em;
+}
+
+#debug-console .data-preview ul {
+  list-style: none;
+  margin: 0 0 0 2em;
+  padding: 0;
+}
+
+#debug-console .data-preview h1 {
+  font-size: 1.2em;
+}
+
+/* Indent JSON when there's a callback. */
+#debug-console .data-preview .callback + #json {
+  padding-left: 1em;
+}
+
+#debug-console .data-preview .callback {
+  font-family: monospace;
+  color: #A52A2A;
+}
