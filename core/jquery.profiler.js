@@ -31,7 +31,9 @@
 			var _requests = {
 				'complete': [],
 				'waiting': []
-			}
+			};
+			
+			var _console = [];
 			
 			var _ajax = function(url, options) {
 				if ( typeof url === "object" ) {
@@ -58,6 +60,32 @@
 					}
 				}
 			};
+			
+			var _log = function() {
+				console.originalLog.apply(this, arguments);
+				_console.push({'type':'log','data':arguments,'time':(new Date()).getTime()});
+			}
+			
+			var _warn = function() {
+				console.originalWarn.apply(this, arguments);
+				_console.push({'type':'warning','data':arguments,'time':(new Date()).getTime()});
+			}
+			
+			var _error = function() {
+				console.originalError.apply(this, arguments);
+				_console.push({'type':'error','data':arguments,'time':(new Date()).getTime()});
+			}
+			
+			if(typeof console != 'undefined') {
+				console.originalLog = console.log;
+				console.log = _log;
+				
+				console.originalWarn = console.warn;
+				console.warn = _warn;
+				
+				console.originalError = console.error;
+				console.error = _error;
+			}
 			
 			var _subscribe = function(event, callbackFunction) {
 				if(typeof _subscribers[event] != 'undefined') {
@@ -315,13 +343,28 @@
 						return request;
 				}
 				return false;
-			}
+			};
+			
+			var _getConsoleData = function(logTypes) {
+				var filteredLogs = [];
+				for(var logEntryIndex in _console) {
+					var logEntry = _console[logEntryIndex];
+					if(logTypes.indexOf(logEntry['type']) > -1)
+						filteredLogs.push(logEntry);
+				}
+				return filteredLogs;
+			};
 			
 			// Map to public functions.
 			this.settings = _settings;
 			this.ajax = _ajax;
 			this.subscribe = _subscribe;
 			this.unsubscribe = _unsubscribe;
+			
+			this.log = _log;
+			this.warn = _warn;
+			this.error = _error;
+			this.getConsoleData = _getConsoleData;
 			
 			this.getRequestById = _getRequestById;
 			this.getFilteredRequestsByType = _getFilteredRequestsByType;
