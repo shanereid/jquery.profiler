@@ -1,0 +1,28 @@
+/* Wrappers */
+.wrapper {
+float: left;
+width: 100%;
+}
+	.wrapper .inner-wrapper {
+	width: 940px;
+	margin: 0 auto;
+	}
+
+/* 12 Columns: 60px width / 20px gutter */
+.col {
+float: left;
+margin-right: 20px;
+}
+	.col.last 			{margin-right: 0;}
+	.col.colspan1 		{width:60px}
+	.col.colspan2 		{width:140px}
+	.col.colspan3 		{width:220px}
+	.col.colspan4 		{width:300px}
+	.col.colspan5 		{width:380px}
+	.col.colspan6 		{width:460px}
+	.col.colspan7 		{width:540px}
+	.col.colspan8 		{width:620px}
+	.col.colspan9 		{width:700px}
+	.col.colspan10 		{width:780px}
+	.col.colspan11 		{width:860px}
+	.col.colspan12 		{width:940px}

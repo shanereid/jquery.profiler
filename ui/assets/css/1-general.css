@@ -1,0 +1,92 @@
+/* Reset Styles */ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%; vertical-align: baseline; background: transparent;} body {line-height: 1;} ol, ul {list-style: none;} blockquote, q {quotes: none;} blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;} :focus {outline: 0;} ins {text-decoration: none;} del {text-decoration: line-through;} table {border-collapse: collapse;border-spacing: 0;}
+
+
+html {
+overflow-y:scroll;
+-webkit-font-smoothing: antialiased;
+}
+
+body {
+color:#111;
+font:14px/18px Helvetica, Arial, sans-serif; 
+background:#fff; 
+}
+
+img {border: none;}
+
+a {
+color: #111;
+text-decoration: underline;
+}
+
+a:hover {
+color: #000;
+text-decoration: none;
+}
+
+	a:active	{outline:none;}
+	a:focus		{outline:none;}
+
+h1 {
+font: bold 24px/32px Helvetica, Arial, sans-serif;	
+}
+
+h2 {
+font: bold 20px/26px Helvetica, Arial, sans-serif;
+}
+
+h3 {
+font: bold 17px/23px Helvetica, Arial, sans-serif;
+}
+
+h4, h5, h6 {
+font: bold 15px/20px Helvetica, Arial, sans-serif;
+}
+
+p {
+font: 14px/18px Helvetica, Arial, sans-serif;
+}
+
+blockquote, blockquote p {
+font-style: italic;
+}
+
+small {
+font-size: 0.8em;
+}
+
+ul {
+list-style-type: disc;
+}
+	ul li {
+	}
+
+ol {
+list-style-type: decimal;
+}
+	ol li {
+	}
+
+cite {
+font: 11px/15px Helvetica, Arial, sans-serif;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+}
+
+	cite:before {content: "\2014 ";}
+
+sup,
+sub {
+height: 0;
+line-height: 1;
+vertical-align: baseline;
+_vertical-align: bottom;
+position: relative;
+font-size: 0.8em;
+}
+	sup {bottom: 1ex;}
+	sub {top: .5ex;}
+
+input, textarea {
+font: 14px/18px Helvetica, Arial, sans-serif; 
+}

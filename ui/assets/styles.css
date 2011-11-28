@@ -6,7 +6,9 @@
   	      Last Updated 17th May 2011
 	
 -------------------------------------------------------------*/
-	
+
+@import url('css/1-general.css');
+@import url('css/2-structure.css');	
 @import url('css/3-value.css');
 @import url('css/4-components.css');
 @import url('css/5-overrides.css');

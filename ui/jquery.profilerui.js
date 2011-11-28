@@ -6,7 +6,7 @@
 			var cssNode = document.createElement('link');
 			cssNode.type = 'text/css';
 			cssNode.rel = 'stylesheet';
-			cssNode.href = 'profiler/styles.css';
+			cssNode.href = '../ui/assets/styles.css';
 			cssNode.media = 'screen';
 			headID.appendChild(cssNode);
 			
@@ -171,7 +171,6 @@
 			var _render = function() {
 				var htmlString =
 					'<div id="debug-console">' +
-						'<div class="title"><h1>Debug Table</h1></div>' + 
 						'<ul class="nav-bar">' + 
 							'<li><a class="bar-button debug-type active" title="requests">Requests</a></li>' + 
 							'<li><a class="bar-button debug-type" title="domain">Widgets</a></li>' + 
